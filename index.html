@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Show do Bilhão Crypto</title>
+
+<!-- ✏️ FAVICON - Ícone da aba do navegador -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -519,7 +526,7 @@
 
   .prize-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     max-width: 700px;
     margin: 0 auto;
@@ -1082,16 +1089,16 @@
   <p class="footer-text lang-pt">
     Este é um jogo educacional. Não oferecemos consultoria de investimentos.
     &nbsp;|&nbsp; <a href="https://educryptoai.github.io/educrypto.github.io">Política de Privacidade</a> 
-    &nbsp;|&nbsp; educryptoai@gmail.com
+    &nbsp;|&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a4f4e5f4958535a5e454b436a4d474b434604494547">[email&#160;protected]</a>
   </p>
   <p class="footer-text lang-en">
     This is an educational game. We do not offer investment advice.
     &nbsp;|&nbsp; <a href="https://educryptoai.github.io/educrypto.github.io/">Privacy Policy</a> 
-    &nbsp;|&nbsp; educryptoai@gmail.com
+    &nbsp;|&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="caafaebfa9b8b3babea5aba38aada7aba3a6e4a9a5a7">[email&#160;protected]</a>
   </p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── LANG TOGGLE
   function setLang(lang) {
     document.body.classList.toggle('en', lang === 'en');
@@ -1137,17 +1144,4 @@
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.feature-card, .prize-item, .rule-item, .screen-frame').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
-  });
-</script>
-</body>
-</html>
+        e.target.style.transform = 'tra

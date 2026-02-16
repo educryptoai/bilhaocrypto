@@ -1099,8 +1099,8 @@
 </footer>
 
 <script>
-  // ── LANG TOGGLE
-  function setLang(lang) {
+  // ── LANG TOGGLE (global function)
+  window.setLang = function(lang) {
     console.log('Trocando idioma para:', lang);
     if (lang === 'en') {
       document.body.classList.add('en');
@@ -1114,15 +1114,15 @@
       document.documentElement.lang = 'pt';
     }
     console.log('Body classes:', document.body.className);
-  }
+  };
 
-  // ── HAMBURGER
-  function toggleMenu() {
+  // ── HAMBURGER (global function)
+  window.toggleMenu = function() {
     const menu = document.getElementById('navMenu');
     const btn = document.getElementById('hamburger');
     menu.classList.toggle('open');
     btn.classList.toggle('open');
-  }
+  };
 
   // ── CLOSE MENU ON LINK CLICK (mobile)
   document.querySelectorAll('.nav-link').forEach(link => {

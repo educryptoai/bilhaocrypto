@@ -1101,10 +1101,17 @@
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── LANG TOGGLE
   function setLang(lang) {
-    document.body.classList.toggle('en', lang === 'en');
-    document.getElementById('btnPt').classList.toggle('active', lang === 'pt');
-    document.getElementById('btnEn').classList.toggle('active', lang === 'en');
-    document.documentElement.lang = lang === 'en' ? 'en' : 'pt';
+    if (lang === 'en') {
+      document.body.classList.add('en');
+      document.getElementById('btnPt').classList.remove('active');
+      document.getElementById('btnEn').classList.add('active');
+      document.documentElement.lang = 'en';
+    } else {
+      document.body.classList.remove('en');
+      document.getElementById('btnPt').classList.add('active');
+      document.getElementById('btnEn').classList.remove('active');
+      document.documentElement.lang = 'pt';
+    }
   }
 
   // ── HAMBURGER

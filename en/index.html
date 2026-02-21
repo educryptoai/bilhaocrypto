@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billion Show Crypto | Cryptocurrency Quiz Game | Learn Bitcoin and Ethereum</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Learn crypto by playing! Educational quiz with 1000+ questions about Bitcoin, Ethereum, DeFi, NFTs, Security and Scams. Compete on the global ranking and show your crypto knowledge.">
+<meta name="keywords" content="crypto quiz, bitcoin game, learn cryptocurrency, crypto education, ethereum quiz, blockchain game, learn bitcoin, crypto trivia, cryptocurrency learning, bitcoin trivia, crypto knowledge test, blockchain education, DeFi quiz, NFT quiz, crypto challenge, billion show crypto, show do bilhão crypto, bitcoin quiz app, ethereum learning game, defi education, nft quiz, crypto security, crypto scam awareness, blockchain trivia">
+<meta name="author" content="Show do Bilhão Crypto">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bilhaocrypto.com.br/en/">
+<meta property="og:title" content="Billion Show Crypto - Learn Crypto by Playing">
+<meta property="og:description" content="Educational quiz with 1000+ questions about Bitcoin, Ethereum, DeFi, NFTs, Security and Real Scams. Compete on the global ranking!">
+<meta property="og:image" content="https://bilhaocrypto.com.br/images/en/EnHomePage.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://bilhaocrypto.com.br/en/">
+<meta name="twitter:title" content="Billion Show Crypto - Learn Crypto by Playing">
+<meta name="twitter:description" content="Educational quiz with 1000+ questions about Bitcoin, Ethereum, DeFi and NFTs. Show your crypto knowledge!">
+<meta name="twitter:image" content="https://bilhaocrypto.com.br/images/en/EnHomePage.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://bilhaocrypto.com.br/en/">
+
+<!-- Hreflang for multilingual SEO -->
+<link rel="alternate" hreflang="pt-BR" href="https://bilhaocrypto.com.br/">
+<link rel="alternate" hreflang="en" href="https://bilhaocrypto.com.br/en/">
+<link rel="alternate" hreflang="x-default" href="https://bilhaocrypto.com.br/en/">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #f5c842;
+    --gold-light: #ffe87c;
+    --gold-dark: #c99b00;
+    --blue-deep: #050d2e;
+    --blue-mid: #0a1a5c;
+    --blue-bright: #1a3fcc;
+    --cyan: #00e5ff;
+    --purple: #7b2ff7;
+    --orange: #f97316;
+    --green: #22c55e;
+    --white: #ffffff;
+    --gray-light: #e2e8f0;
+    --glass: rgba(255,255,255,0.06);
+    --glass-border: rgba(255,255,255,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Exo 2', sans-serif;
+    background: var(--blue-deep);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(26,63,204,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(123,47,247,0.2) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.1) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── NAVBAR ─── */
+  .lang-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 56px;
+    background: rgba(5,13,46,0.9);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--glass-border);
+    gap: 16px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: all 0.25s;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px; left: 50%; right: 50%;
+    height: 1px;
+    background: var(--gold);
+    transition: all 0.25s;
+  }
+
+  .nav-link:hover { color: var(--gold); background: rgba(245,200,66,0.07); }
+  .nav-link:hover::after { left: 14px; right: 14px; }
+
+  .navbar-right { flex-shrink: 0; }
+
+  @media (max-width: 768px) {
+    .navbar-menu { display: none; }
+    .navbar-menu.open { display: flex; flex-direction: column; position: fixed; top: 56px; left: 0; right: 0; background: rgba(5,13,46,0.97); backdrop-filter: blur(14px); padding: 16px 24px; gap: 4px; border-bottom: 1px solid var(--glass-border); z-index: 999; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.7); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-link { font-size: 15px; padding: 10px 14px; }
+  }
+
+  @media (min-width: 769px) { .hamburger { display: none; } }
+
+  .navbar-show { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--cyan); text-transform: uppercase; }
+  .navbar-bilhao { font-family: 'Orbitron', monospace; font-size: 16px; font-weight: 900; background: linear-gradient(135deg, var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 0 8px rgba(245,200,66,0.5)); }
+  .navbar-crypto { font-family: 'Orbitron', monospace; font-size: 12px; font-weight: 700; color: var(--orange); letter-spacing: 0.05em; }
+
+  .lang-toggle { display: flex; gap: 4px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 50px; padding: 4px; }
+  .lang-btn { font-family: 'Orbitron', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 7px 16px; border-radius: 50px; border: none; cursor: pointer; background: transparent; color: rgba(255,255,255,0.5); transition: all 0.3s; }
+  .lang-btn.active { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--blue-deep); box-shadow: 0 0 18px rgba(245,200,66,0.5); }
+  .lang-btn:hover:not(.active) { color: var(--white); }
+
+  /* ─── HERO ─── */
+  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 40px 60px; overflow: hidden; z-index: 1; }
+  .hero-inner { display: flex; align-items: center; justify-content: center; gap: 60px; max-width: 1100px; width: 100%; }
+  .hero-left { flex: 1; min-width: 280px; text-align: left; }
+  .hero-right { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; }
+
+  .hero-screens { position: relative; width: 280px; height: 520px; }
+  .hero-screen { position: absolute; border-radius: 24px; overflow: hidden; border: 2px solid var(--glass-border); box-shadow: 0 24px 60px rgba(0,0,0,0.6); transition: transform 0.4s; }
+  .hero-screen img { width: 100%; display: block; }
+  .screen-front { width: 160px; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 3; border-color: var(--gold); box-shadow: 0 0 40px rgba(245,200,66,0.3), 0 24px 60px rgba(0,0,0,0.6); animation: heroFloat 4s ease-in-out infinite; }
+  .screen-back { width: 130px; left: 4px; top: 50%; transform: translateY(-50%) rotate(-8deg); z-index: 2; opacity: 0.85; animation: heroFloat2 4.5s ease-in-out infinite; }
+  .screen-back2 { width: 130px; right: 4px; top: 50%; transform: translateY(-50%) rotate(8deg); z-index: 2; opacity: 0.85; animation: heroFloat3 5s ease-in-out infinite; }
+
+  @keyframes heroFloat { 0%,100% { transform: translate(-50%,-50%) translateY(0); } 50% { transform: translate(-50%,-50%) translateY(-14px); } }
+  @keyframes heroFloat2 { 0%,100% { transform: translateY(-50%) rotate(-8deg) translateY(0); } 50% { transform: translateY(-50%) rotate(-8deg) translateY(-10px); } }
+  @keyframes heroFloat3 { 0%,100% { transform: translateY(-50%) rotate(8deg) translateY(0); } 50% { transform: translateY(-50%) rotate(8deg) translateY(-12px); } }
+
+  .hero-glow { position: absolute; width: 700px; height: 700px; background: radial-gradient(circle, rgba(245,200,66,0.12) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation: pulse 4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity: 0.8; } 50% { transform: translate(-50%,-50%) scale(1.15); opacity: 1; } }
+
+  .brand-logo { position: relative; margin-bottom: 28px; animation: floatIn 1s ease both; }
+  @keyframes floatIn { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+
+  .brand-show { font-family: 'Rajdhani', sans-serif; font-size: clamp(15px, 2.5vw, 19px); font-weight: 700; letter-spacing: 0.45em; color: var(--cyan); text-shadow: 0 0 14px rgba(0,229,255,0.6); text-transform: uppercase; display: block; margin-bottom: 2px; animation: floatIn 1s ease 0.1s both; }
+  .brand-bilhao { font-family: 'Orbitron', monospace; font-size: clamp(54px, 10vw, 92px); font-weight: 900; line-height: 0.95; background: linear-gradient(160deg, #fff7c2 0%, var(--gold-light) 30%, var(--gold) 60%, var(--gold-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 0 28px rgba(245,200,66,0.55)) drop-shadow(0 4px 12px rgba(0,0,0,0.5)); animation: floatIn 1s ease 0.2s both; display: block; }
+  .brand-crypto { font-family: 'Exo 2', sans-serif; font-size: clamp(13px, 2vw, 16px); font-weight: 800; letter-spacing: 0.6em; color: var(--orange); text-shadow: 0 0 18px rgba(249,115,22,0.7); margin-top: 8px; display: flex; align-items: center; gap: 10px; animation: floatIn 1s ease 0.3s both; }
+  .brand-crypto::before, .brand-crypto::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--orange)); max-width: 50px; }
+  .brand-crypto::after { background: linear-gradient(90deg, var(--orange), transparent); }
+
+  .crypto-icons { display: flex; gap: 14px; justify-content: flex-start; margin: 18px 0; animation: floatIn 1s ease 0.4s both; }
+  .crypto-icon { width: 42px; height: 42px; border-radius: 50%; }
+
+  .hero-tagline { font-family: 'Rajdhani', sans-serif; font-size: clamp(16px, 3vw, 22px); font-weight: 600; letter-spacing: 0.05em; color: var(--gray-light); margin: 0 0 32px; line-height: 1.5; animation: floatIn 1s ease 0.5s both; }
+  .hero-tagline span { color: var(--gold); }
+
+  .store-badges { animation: floatIn 1s ease 0.6s both; }
+  .store-label { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 12px; }
+  .badges-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 12px; text-decoration: none; border: 1px solid var(--glass-border); transition: all 0.3s; min-width: 150px; background: rgba(255,255,255,0.05); color: var(--white); }
+  .store-badge:hover { background: rgba(255,255,255,0.1); border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(245,200,66,0.2); }
+  .store-badge-icon { width: 26px; height: 26px; flex-shrink: 0; color: var(--white); }
+  .store-badge-text { display: flex; flex-direction: column; }
+  .store-line1 { font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); text-transform: uppercase; }
+  .store-line2 { font-family: 'Orbitron', monospace; font-size: 13px; font-weight: 700; color: var(--white); white-space: nowrap; }
+
+  /* ─── SECTIONS ─── */
+  .section { position: relative; z-index: 1; padding: 80px 24px; }
+  .section-title { font-family: 'Orbitron', monospace; font-size: clamp(22px, 5vw, 36px); font-weight: 900; text-align: center; margin-bottom: 16px; background: linear-gradient(135deg, var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .section-subtitle { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.6); text-align: center; margin-bottom: 56px; max-width: 500px; margin-left: auto; margin-right: auto; letter-spacing: 0.05em; }
+  .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 16px; }
+
+  /* ─── PRIZE GRID ─── */
+  .prize-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 700px; margin: 0 auto; }
+  @media (max-width: 600px) { .prize-grid { grid-template-columns: repeat(2, 1fr); } }
+  .prize-item { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 8px; padding: 10px 14px; display: flex; align-items: center; gap: 8px; transition: all 0.3s; cursor: default; }
+  .prize-item:hover { background: rgba(255,255,255,0.1); border-color: var(--gold); transform: translateX(4px); }
+  .prize-item.highlight { background: linear-gradient(135deg, rgba(245,200,66,0.15), rgba(245,200,66,0.05)); border-color: var(--gold); }
+  .prize-item.jackpot { background: linear-gradient(135deg, rgba(245,200,66,0.25), rgba(249,115,22,0.15)); border-color: var(--gold); grid-column: 1 / -1; justify-content: center; padding: 16px; }
+  .prize-rs { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }
+  .prize-amount { font-family: 'Orbitron', monospace; font-size: 13px; font-weight: 700; color: var(--white); }
+  .prize-item.jackpot .prize-amount { font-size: 20px; color: var(--gold); text-shadow: 0 0 20px var(--gold); }
+  .prize-arrow { width: 14px; height: 14px; border-top: 2px solid; border-right: 2px solid; transform: rotate(45deg); flex-shrink: 0; color: var(--gold); }
+
+  /* ─── FEATURES ─── */
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+  .feature-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 32px 28px; transition: all 0.4s; position: relative; overflow: hidden; }
+  .feature-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); transform: scaleX(0); transition: transform 0.4s; }
+  .feature-card:hover::before { transform: scaleX(1); }
+  .feature-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(245,200,66,0.3); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+  .feature-icon { font-size: 40px; margin-bottom: 20px; display: block; }
+  .feature-title { font-family: 'Orbitron', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; color: var(--gold); margin-bottom: 12px; text-transform: uppercase; }
+  .feature-text { font-family: 'Rajdhani', sans-serif; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.7); font-weight: 400; }
+
+  /* ─── RULES ─── */
+  .rules-container { max-width: 700px; margin: 0 auto; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 20px; padding: 48px 40px; position: relative; overflow: hidden; }
+  .rules-container::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at top, rgba(245,200,66,0.06) 0%, transparent 60%); pointer-events: none; }
+  .rule-item { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--glass-border); }
+  .rule-item:last-child { border-bottom: none; }
+  .rule-number { font-family: 'Orbitron', monospace; font-size: 13px; font-weight: 900; color: var(--gold); background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.3); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .rule-text { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.85); line-height: 1.5; padding-top: 6px; }
+
+  /* ─── FOOTER ─── */
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--glass-border); padding: 32px 24px; text-align: center; }
+  .footer-text { font-family: 'Rajdhani', sans-serif; font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 0.05em; }
+  .footer-text a { color: rgba(255,255,255,0.5); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .footer-text a:hover { color: var(--gold); }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--blue-deep); }
+  ::-webkit-scrollbar-thumb { background: var(--blue-mid); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+  /* ─── PARTICLES ─── */
+  .particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .particle { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: var(--gold); opacity: 0; animation: particleFly var(--dur) ease-in infinite; animation-delay: var(--delay); left: var(--x); top: 100%; }
+  @keyframes particleFly { 0% { opacity: 0; transform: translateY(0) scale(1); } 10% { opacity: 0.8; } 90% { opacity: 0.4; } 100% { opacity: 0; transform: translateY(-100vh) scale(0.3); } }
+
+  @keyframes borderGlow { 0%,100% { box-shadow: 0 0 15px rgba(245,200,66,0.3); } 50% { box-shadow: 0 0 35px rgba(245,200,66,0.6); } }
+  .jackpot { animation: borderGlow 3s ease-in-out infinite; }
+
+  @media (max-width: 860px) {
+    .hero-inner { flex-direction: column; text-align: center; gap: 40px; }
+    .hero-left { text-align: center; }
+    .crypto-icons { justify-content: center; }
+    .badges-row { justify-content: center; }
+    .hero-screens { width: 240px; height: 440px; }
+    .screen-front { width: 140px; }
+    .screen-back, .screen-back2 { width: 110px; }
+  }
+  @media (max-width: 600px) {
+    .rules-container { padding: 32px 20px; }
+    .hero-screens { width: 210px; height: 380px; }
+    .screen-front { width: 120px; }
+    .screen-back, .screen-back2 { width: 95px; }
+    .badges-row { gap: 8px; }
+    .store-badge { min-width: 130px; padding: 8px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Billion Show Crypto",
+  "alternateName": "Show do Bilhão Crypto",
+  "description": "Educational crypto quiz game with 1000+ questions about Bitcoin, Ethereum, DeFi, NFTs, Security and Scams. Compete on the global ranking!",
+  "url": "https://bilhaocrypto.com.br/en/",
+  "applicationCategory": "GameApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "operatingSystem": "Android, iOS",
+  "keywords": "crypto quiz, bitcoin game, learn cryptocurrency, crypto education, ethereum quiz, blockchain game, learn bitcoin, crypto trivia, DeFi, NFT, billion show crypto",
+  "inLanguage": ["en-US", "pt-BR"],
+  "isAccessibleForFree": true,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "150"
+  }
+}
+</script>
+
+<!-- PARTICLES -->
+<div class="particles" id="particles"></div>
+
+<!-- NAVBAR -->
+<header class="lang-bar">
+  <a class="navbar-brand" href="/en/">
+    <span class="navbar-show">Billion</span>
+    <span class="navbar-bilhao">Show</span>
+    <span class="navbar-crypto">Crypto</span>
+  </a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="navbar-menu" id="navMenu">
+    <a href="#" class="nav-link">Home</a>
+    <a href="/ranking" class="nav-link">🏆 Ranking</a>
+    <a href="#features" class="nav-link">Why Play?</a>
+    <a href="#prizes" class="nav-link">Prize Ladder</a>
+    <a href="#rules" class="nav-link">Game Rules</a>
+  </nav>
+  <div class="navbar-right">
+    <div class="lang-toggle">
+      <button class="lang-btn" onclick="window.location.href='https://bilhaocrypto.com.br/'">🇧🇷 PT</button>
+      <button class="lang-btn active">🇺🇸 EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="brand-logo">
+        <span class="brand-show">Billion</span>
+        <div class="brand-bilhao">SHOW</div>
+        <span class="brand-crypto">CRYPTO</span>
+      </div>
+
+      <div class="crypto-icons">
+        <img src="../images/btc.svg" alt="Bitcoin" class="crypto-icon">
+        <img src="../images/eth.svg" alt="Ethereum" class="crypto-icon">
+        <img src="../images/bnb.svg" alt="BNB" class="crypto-icon">
+        <img src="../images/sol.svg" alt="SOL" class="crypto-icon">
+        <img src="../images/usdt.svg" alt="USDT" class="crypto-icon">
+        <img src="../images/usdc.svg" alt="USDC" class="crypto-icon">
+      </div>
+
+      <p class="hero-tagline">
+        <span style="color:var(--gold)">Learn crypto</span> while playing — compete for the <span style="color:var(--gold)">top of the ranking</span> and show how much you know about crypto<br>
+        <span style="color:var(--gold)">+1000 questions, Bitcoin, Ethereum, meaning of words, real-life scams and security situations!</span>
+      </p>
+
+      <div class="store-badges">
+        <p class="store-label">Available on</p>
+        <div class="badges-row">
+          <a href="https://play.google.com" target="_blank" class="store-badge google">
+            <svg class="store-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.35.2.76.22 1.14.04l12.4-7.17-2.58-2.6-10.96 9.73zm-1.52-18.5C1.25 5.73 1 6.3 1 7.04v9.92c0 .74.25 1.31.66 1.78l.09.09L9.4 12l-7.6-6.64-.14-.1zM19.93 10.3L17.3 8.76 14.4 12l2.93 2.94 2.62-1.52c.75-.43.75-1.69-.02-2.12zM4.32.2C3.94.02 3.53.04 3.18.24L14.4 12 4.32.2z"/></svg>
+            <div class="store-badge-text">
+              <span class="store-line1">Get it on</span>
+              <span class="store-line2">Google Play</span>
+            </div>
+          </a>
+          <a href="https://apps.apple.com" target="_blank" class="store-badge apple">
+            <svg class="store-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div class="store-badge-text">
+              <span class="store-line1">Download on the</span>
+              <span class="store-line2">App Store</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-screens">
+        <div class="hero-screen screen-back">
+          <img src="../images/en/EnPageName.png" alt="Name Page EN">
+        </div>
+        <div class="hero-screen screen-front">
+          <img src="../images/en/EnHomePage.png" alt="Home Page EN">
+        </div>
+        <div class="hero-screen screen-back2">
+          <img src="../images/en/EnInfoPage.png" alt="Info Page EN">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="divider"></div>
+  <h2 class="section-title">Why Play?</h2>
+  <p class="section-subtitle">More than a game: it's your gateway into the crypto world</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="feature-icon">🧠</span>
+      <div class="feature-title">Real Education</div>
+      <p class="feature-text">Expert-crafted questions cover Bitcoin, Ethereum, DeFi, NFTs, Security, Real Scams and much more.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">⏱️</span>
+      <div class="feature-title">30 Seconds</div>
+      <p class="feature-text">You have 30 seconds to answer each question. Speed and knowledge earn XP — get it wrong and lose all XP earned in the current match!</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🏆</span>
+      <div class="feature-title">Global Ranking</div>
+      <p class="feature-text">Climb the rankings, show your knowledge and compete for the top spot in crypto market knowledge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIZE LADDER -->
+<section class="section" id="prizes">
+  <div class="divider"></div>
+  <h2 class="section-title">Prize Ladder</h2>
+  <p class="section-subtitle">The further you go, the more XP you accumulate</p>
+  <div class="prize-grid">
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">1K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">2K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">3K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">4K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">5K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">10K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">20K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">30K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">40K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">50K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">100K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">200K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">300K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">400K</span></div>
+    <div class="prize-item"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">500K</span></div>
+    <div class="prize-item highlight"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">750K</span></div>
+    <div class="prize-item highlight"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">1M</span></div>
+    <div class="prize-item highlight"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">2M</span></div>
+    <div class="prize-item highlight"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">3M</span></div>
+    <div class="prize-item highlight"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">4M</span></div>
+    <div class="prize-item highlight"><div class="prize-arrow"></div><span class="prize-rs">R$</span><span class="prize-amount">5M</span></div>
+    <div class="prize-item jackpot">🏆 &nbsp;<span class="prize-amount">R$ 1 BILLION</span></div>
+  </div>
+</section>
+
+<!-- GAME RULES -->
+<section class="section" id="rules">
+  <div class="divider"></div>
+  <h2 class="section-title">Game Rules</h2>
+  <p class="section-subtitle">Easy to learn, hard to master</p>
+  <div class="rules-container">
+    <div class="rule-item">
+      <div class="rule-number">01</div>
+      <p class="rule-text">Crypto trivia game — answer correctly to accumulate XP.</p>
+    </div>
+    <div class="rule-item">
+      <div class="rule-number">02</div>
+      <p class="rule-text">You have <strong>30 seconds</strong> to answer each question.</p>
+    </div>
+    <div class="rule-item">
+      <div class="rule-number">03</div>
+      <p class="rule-text">Each correct answer earns XP. If you get it wrong, you <strong>lose all XP</strong> accumulated in the game.</p>
+    </div>
+    <div class="rule-item">
+      <div class="rule-number">04</div>
+      <p class="rule-text">If you stop, you win the points accumulated up to the <strong>last correct answer</strong>.</p>
+    </div>
+    <div class="rule-item">
+      <div class="rule-number">05</div>
+      <p class="rule-text">The question worth <strong>1 Billion</strong> earns the most XP; the others earn the same amount.</p>
+    </div>
+    <div class="rule-item">
+      <div class="rule-number">06</div>
+      <p class="rule-text">You can use <strong>cards, help, skip or stop</strong> — only once per game.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-text">
+    This is an educational game. We do not offer investment advice.
+    &nbsp;|&nbsp; <a href="https://bilhaocrypto.com.br/privacy-policy">Privacy Policy</a>
+    &nbsp;|&nbsp; educryptoai@gmail.com
+  </p>
+</footer>
+
+<script>
+  window.toggleMenu = function() {
+    const menu = document.getElementById('navMenu');
+    const btn = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+  };
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navMenu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    });
+  });
+
+  (function createParticles() {
+    const container = document.getElementById('particles');
+    const colors = ['#f5c842','#00e5ff','#f97316','#7b2ff7'];
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.setProperty('--x', Math.random() * 100 + '%');
+      p.style.setProperty('--dur', (6 + Math.random() * 12) + 's');
+      p.style.setProperty('--delay', (Math.random() * 10) + 's');
+      p.style.background = colors[Math.floor(Math.random() * colors.length)];
+      p.style.width = p.style.height = (1 + Math.random() * 3) + 'px';
+      container.appendChild(p);
+    }
+  })();
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.feature-card, .prize-item, .rule-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>

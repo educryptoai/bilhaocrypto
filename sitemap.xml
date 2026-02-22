@@ -1,15 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Página principal PT -->
   <url>
     <loc>https://bilhaocrypto.com.br/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bilhaocrypto.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bilhaocrypto.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bilhaocrypto.com.br/"/>
     <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Página principal EN -->
   <url>
     <loc>https://bilhaocrypto.com.br/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bilhaocrypto.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bilhaocrypto.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bilhaocrypto.com.br/"/>
     <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Ranking PT -->
+  <url>
+    <loc>https://bilhaocrypto.com.br/ranking</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bilhaocrypto.com.br/ranking"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bilhaocrypto.com.br/en/ranking"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bilhaocrypto.com.br/ranking"/>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Ranking EN -->
+  <url>
+    <loc>https://bilhaocrypto.com.br/en/ranking</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bilhaocrypto.com.br/ranking"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bilhaocrypto.com.br/en/ranking"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bilhaocrypto.com.br/ranking"/>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Política de Privacidade PT -->
+  <url>
+    <loc>https://bilhaocrypto.com.br/politica-privacidade</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bilhaocrypto.com.br/politica-privacidade"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bilhaocrypto.com.br/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bilhaocrypto.com.br/politica-privacidade"/>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Privacy Policy EN -->
+  <url>
+    <loc>https://bilhaocrypto.com.br/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bilhaocrypto.com.br/politica-privacidade"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bilhaocrypto.com.br/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bilhaocrypto.com.br/politica-privacidade"/>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
